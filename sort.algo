@@ -1,0 +1,31 @@
+ALGORITHM sort
+PROCEDURE swap(var x,var y: INTEGER)
+VAR
+    tmp:INTEGER
+BEGIN
+    tmp:=x;
+    x:=y;
+    y:=tmp;
+END
+
+VAR
+    i,j,n,A: INTEGER
+BEGIN
+    n:=tab.length
+    FOR i FROM 0 TO n-1 STEP 1  DO
+    FOR j FROM 0 TO n-i-1 STEP 1  DO
+       IF (tab[j] > tab[j+1]) THEN
+       swap(tab[j],tab[j+1])
+       END_IF
+    END_FOR
+    END_FOR
+    write ("entrer un element à inséerer");
+    read (A)
+    FOR i FROM 0 TO n-1 STEP 1  DO
+        IF (tab[i]>A) THEN
+            tab[i+1]:=A
+        END_IF
+    END_FOR
+    END
+
+
